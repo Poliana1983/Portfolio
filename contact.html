@@ -46,31 +46,35 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       <main>
         <a href="index.html" class="home-button"><span class="fa fa-home"></span></a>
         <h1 class="mb-5">Entre em contato</h1>
-        <form action="#" method="post">
+        <form action="https://postmail.invotes.com/send" method="post" id="email_form" >
+          <input type="hidden" name="subject" placeholder="Subject" style="display:none;" value="contato do site" /> 
+          <input type="hidden" name="access_token" value="yw6tl4mx1wco0efp2onagisn" />
+          <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+    <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
             
           <div class="row mb-4">
             <div class="col-md-12">
-              <input type="text" class="form-control" placeholder="Nome">
+              <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome">
             </div>
           </div>
           <div class="row mb-4">
             <div class="col-md-12">
-              <input type="text" class="form-control" placeholder="E-mail">
+              <input type="text" name="e-mail" id="e-mail" class="form-control" placeholder="E-mail">
             </div>
           </div>
           <div class="row mb-4">
             <div class="col-md-12">
-              <input type="text" class="form-control" placeholder="Telefone">
+              <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Telefone">
             </div>
           </div>
           <div class="row mb-4">
             <div class="col-md-12">
-              <textarea name="#" id="" class="form-control" placeholder="Escreva uma mensagem" cols="30" rows="10"></textarea>
+              <textarea name="text" id="text" class="form-control" placeholder="Escreva uma mensagem" cols="30" rows="10"></textarea>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
-              <input type="submit" class="btn btn-primary btn-block" value="Enviar">
+              <input id="submit_form" type="submit" class="btn btn-primary btn-block" value="Enviar">
             </div>
           </div>
           
